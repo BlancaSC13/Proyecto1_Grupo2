@@ -1,7 +1,6 @@
 package util;
 
-import domain.System.OrderDetail;
-import domain.System.Product;
+import domain.System.*;
 import domain.TDA.CircularLinkedList;
 
 import java.text.DecimalFormat;
@@ -25,10 +24,6 @@ public class Utility {
 
     public static CircularLinkedList getEmployeeList() {
         return employeeList;
-    }
-
-    public static void setEmployeeList(CircularLinkedList employeeList) {
-        Utility.employeeList = employeeList;
     }
 
     public static int random() {
@@ -92,6 +87,18 @@ public class Utility {
                 OrderDetail or2 = (OrderDetail) b;
                 return or1.getId() < or2.getId() ? -1 :
                         or1.getId() > or2.getId() ? 1 : 0;
+            case "Security":
+                Security s1 = (Security) a; Security s2 = (Security) b;
+                return s1.toString().compareTo(s2.toString())<0? -1:
+                        s1.toString().compareTo(s2.toString())>0?  1: 0;
+            case "User":
+                User us1 = (User) a; User us2 = (User) b;
+                return us1.getIdentificacion().compareTo(us2.getIdentificacion())<0? -1:
+                        us1.getIdentificacion().compareTo(us2.getIdentificacion())>0?  1: 0;
+            case "Supplier":
+                Supplier su1 = (Supplier) a; Supplier su2 = (Supplier) b;
+                return su1.getId().compareTo(su2.getId())<0? -1:
+                        su1.getId().compareTo(su2.getId())>0?  1: 0;
         }
         return 2; //Unknown
     }
@@ -109,6 +116,9 @@ public class Utility {
         if (a instanceof Character && b instanceof Character) return "Character";
         if (a instanceof Product && b instanceof Product) return "Product";
         if (a instanceof OrderDetail && b instanceof OrderDetail) return "OrderDetail";
+        if (a instanceof Security && b instanceof Security) return "Security";
+        if (a instanceof User && b instanceof User) return "User";
+        if (a instanceof Supplier && b instanceof Supplier) return "Supplier";
         return "Unknown"; //desconocido
     }
 
@@ -169,6 +179,37 @@ public class Utility {
     private static boolean isBetween(int value, int lowBound, int highBound) {
         return lowBound <= value && value <= highBound;
     }
+    public static boolean validatePassword(String password) {
+        boolean validate = false;
+        int numeros = 0, mayusculas = 0, minusculas = 0;
+        if (password.length() >= 8) {
+            for (int i = 0; i < password.length(); i++) {
+                char letra = password.charAt(i); //Revisar uno a uno cada caracter para saber si es un número
 
+                if (letra >= 49 && letra <= 57) //Valida el número con las posiciones en el ASCII
+                    numeros++;
+
+                if (letra >= 65 && letra <= 90)//Valida las mayúsculas con las posiciones en el ASCII
+                    mayusculas++;
+
+                if (letra >= 97 && letra <= 122)
+                    minusculas++;
+            }//End for
+
+            if (numeros > 0 && mayusculas > 0 && minusculas > 0)
+                validate = true;
+        }//End if
+        return validate;
+    }
+    public static String fecha() {
+        Date fechaHoraActual = new Date();
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
+        String fechaActual = formatoFecha.format(fechaHoraActual);
+        String horaActual = formatoHora.format(fechaHoraActual);
+        // Construir el string final
+        String result = fechaActual + ", a las " + horaActual;
+        return result;
+    }
 
 }

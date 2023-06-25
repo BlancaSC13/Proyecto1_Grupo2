@@ -20,16 +20,13 @@ import java.util.List;
 public class RealizarCompras
 {
     @FXML
-    private ChoiceBox<String> ProductoChoiceBox;
+    private ChoiceBox<String> ProductoChoiceBox = new ChoiceBox<>();
 
     @FXML
     private TextField cantidadtxt;
 
     @FXML
-    private Text nombreUsuarioTXT;
-
-    @FXML
-    private TableView pedidoTblView;
+    private TableView pedidoTblView = new TableView<>();
 
     private ObservableList<OrderDetail> items;
     private BTree pedidos;
@@ -41,7 +38,7 @@ public class RealizarCompras
         pedidos = new BTree();
         ObservableList<String> products = FXCollections.observableArrayList();
         GestionaArchivo.getInventory("inventario.json").forEach(product -> {
-            products.add(((Product)product).getDescription());
+            products.add(product.getDescription());
         });
         ProductoChoiceBox.setItems(products);
         ProductoChoiceBox.setValue("Productos");

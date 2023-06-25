@@ -4,6 +4,7 @@ module ucr.proyecto {
     requires com.google.gson;
     requires java.base;
     requires pdfjet;
+    requires java.mail;
 
     opens ucr.proyecto to javafx.fxml;
     opens domain.TDA to com.google.gson;

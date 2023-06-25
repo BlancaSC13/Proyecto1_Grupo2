@@ -48,7 +48,6 @@ public class AgregarProveedorController
             alert.setHeaderText("Registro de usarios");
             alert.setContentText("Usuario registrado con éxito");
             alert.showAndWait();
-            gestionProveedoresController.stage.close();
             gestionProveedoresController.setItems();
         } else{
             alert = new Alert(Alert.AlertType.ERROR);
@@ -57,9 +56,7 @@ public class AgregarProveedorController
             alert.showAndWait();
         }
     }
-    public void addController(GestionProveedoresController gestionProveedoresController) {
-        this.gestionProveedoresController = gestionProveedoresController;
-    }
+
 
     @FXML
     void btnLimpiarOnAction(ActionEvent event) {

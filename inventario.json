@@ -1,1 +1,10 @@
-[{"id":1,"description":"a","price":4.0,"currentStock":4,"minimumStock":4,"suplierId":2}]
+[{"id":1,"description":"Camisa de Algodón","price":29.99,"currentStock":50,"minimumStock":10,"suplierId":2},
+  {"id":2,"description":"Camisa 2","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":5512},
+  {"id":3,"description":"Camisa 3","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":4,"description":"Camisa 4","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":5,"description":"Camisa 5","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":6,"description":"Camisa 6","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":7,"description":"Camisa 7","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":8,"description":"Camisa 8","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":9,"description":"Camisa 9","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25},
+  {"id":10,"description":"Camisa 10","price":500.0,"currentStock":20,"minimumStock":30,"suplierId":25}]

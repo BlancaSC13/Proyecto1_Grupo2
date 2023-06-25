@@ -13,7 +13,7 @@
    <left>
           <VBox alignment="TOP_CENTER" prefHeight="573.0" prefWidth="190.0" spacing="10.0" styleClass="vbox" BorderPane.alignment="CENTER">
               <children>
-                  <ImageView fitHeight="127.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageView" fitHeight="127.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
                       <image>
                           <Image url="@../../../images/corto.png" />
                       </image>

@@ -22,6 +22,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import service.GestionaArchivo;
 import ucr.proyecto.HelloApplication;
 import java.io.IOException;
 import java.util.List;
@@ -40,7 +41,7 @@ public class InventarioController {
     @FXML
     public void initialize() {
         productos = new BTree();
-        Inventory.getInventory().forEach(product -> {
+        GestionaArchivo.getInventory("inventario.json").forEach(product -> {
             productos.add(product);
         });
         setTable();
