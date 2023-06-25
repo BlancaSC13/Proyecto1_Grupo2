@@ -2,8 +2,8 @@ module ucr.proyecto {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.google.gson;
-    requires PDFjet;
     requires java.base;
+    requires pdfjet;
 
     opens ucr.proyecto to javafx.fxml;
     opens domain.TDA to com.google.gson;
