@@ -51,12 +51,12 @@ public class MenuAdministradorController
 
     @FXML
     void btnInventarioOnAction(ActionEvent event) {
-        loadPage("inventario.fxml");
+        loadPage("administrador/inventario.fxml");
     }
 
     @FXML
     void btnProductosOnAction(ActionEvent event) {
-        loadPage("gestionProductos.fxml");
+        loadPage("administrador/gestionProductos.fxml");
     }
 
     @FXML
@@ -66,7 +66,7 @@ public class MenuAdministradorController
 
     @FXML
     void btnReportesOnAction(ActionEvent event) {
-        loadPage("generarReporteAdmin.fxml");
+        loadPage("administrador/generarReporteAdmin.fxml");
     }
 
     @FXML
@@ -80,7 +80,7 @@ public class MenuAdministradorController
     }
 
     @FXML
-    void btnDemandaOnAction(ActionEvent event) {loadPage("previsionDemanda.fxml");}
+    void btnDemandaOnAction(ActionEvent event) {loadPage("administrador/previsionDemanda.fxml");}
 
     @FXML
     void btnSeetings(MouseEvent event) {
