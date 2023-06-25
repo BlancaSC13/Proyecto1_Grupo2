@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" prefHeight="573.0" prefWidth="977.0" stylesheets="@../../../stylesheet/menuUsuario.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cliente.MenuClienteController">
+   <left>
+          <VBox alignment="TOP_CENTER" prefHeight="573.0" prefWidth="190.0" spacing="10.0" styleClass="vbox" BorderPane.alignment="CENTER">
+              <children>
+                  <ImageView fitHeight="127.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../../../images/corto.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../../../images/titulo1-1.png" />
+                      </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="50.0" prefWidth="156.0" text="Home">
+                      <font>
+                          <Font name="Lucida Bright Demibold" size="20.0" />
+                      </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#btnPedidoOnAction" prefHeight="50.0" prefWidth="156.0" text="Pedido">
+                      <font>
+                          <Font name="Lucida Bright Demibold" size="20.0" />
+                      </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnReportesOnAction" prefHeight="50.0" prefWidth="156.0" text="Reportes">
+                      <font>
+                          <Font name="Lucida Bright Demibold" size="20.0" />
+                      </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="135.0" lineSpacing="4.0" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="50.0" prefWidth="156.0" text="Salir">
+                      <font>
+                          <Font name="Lucida Bright Demibold" size="20.0" />
+                      </font>
+                  </Button>
+              </children>
+              <opaqueInsets>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+              </opaqueInsets>
+          </VBox>
+   </left>
+   <center>
+        <AnchorPane fx:id="ap" prefHeight="573.0" prefWidth="774.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

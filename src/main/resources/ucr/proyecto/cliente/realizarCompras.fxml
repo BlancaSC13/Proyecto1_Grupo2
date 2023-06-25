@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="560.0" prefWidth="786.0" stylesheets="@../../../stylesheet/blackButtonCliente.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cliente.RealizarCompras">
+   <top>
+      <AnchorPane prefHeight="570.0" prefWidth="791.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="nombreUsuarioTXT" layoutX="661.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Nombre Usuario*">
+               <font>
+                  <Font name="SimSun" size="15.0" />
+               </font>
+            </Text>
+            <TableView fx:id="pedidoTblView" layoutX="18.0" layoutY="241.0" prefHeight="259.0" prefWidth="749.0" />
+            <VBox alignment="CENTER" layoutX="523.0" layoutY="120.0" prefHeight="92.0" prefWidth="247.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAgregarOnAction" prefHeight="37.0" prefWidth="236.0" text="Agregar al pedido" textFill="#06ebd3">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="37.0" prefWidth="236.0" text="Consultar Disponibilidad" textFill="#06ebd3">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="172.0" layoutY="513.0" prefHeight="42.0" prefWidth="511.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnRealizarPedidoOnAction" prefHeight="37.0" prefWidth="236.0" text="Realizar pedido" textFill="#06ebd3">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnCancelarOnAction" prefHeight="37.0" prefWidth="236.0" text="Cancelar" textFill="#06ebd3">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" layoutX="256.0" layoutY="101.0" prefHeight="130.0" prefWidth="163.0" spacing="15.0">
+               <children>
+                  <ChoiceBox fx:id="marcaChoiceBox" prefHeight="34.0" prefWidth="177.0" />
+                  <ChoiceBox fx:id="ProductoChoiceBox" prefHeight="34.0" prefWidth="177.0" />
+                  <TextField fx:id="cantidadtxt" prefHeight="29.0" prefWidth="176.0" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="-1.0" prefHeight="70.0" prefWidth="788.0" styleClass="hbox">
+               <children>
+                  <Text fill="#26ffed" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar Pedido">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" layoutX="103.0" layoutY="106.0" prefHeight="105.0" prefWidth="100.0" spacing="25.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marca:">
+                     <font>
+                        <Font name="Lucida Bright Italic" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Producto:">
+                     <font>
+                        <Font name="Lucida Bright Italic" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad:">
+                     <font>
+                        <Font name="Lucida Bright Italic" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

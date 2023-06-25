@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="493.0" prefWidth="742.0" stylesheets="@../../../stylesheet/blackButton.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.administrador.GenerarReporteAdminController">
+   <center>
+      <AnchorPane prefHeight="493.0" prefWidth="742.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="82.0" prefWidth="791.0" style="-fx-background-color: black;" styleClass="hbox">
+               <children>
+                  <Text fill="#7689dc" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Generar reportes">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Text layoutX="33.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de reporte:" wrappingWidth="172.392578125">
+               <font>
+                  <Font name="Lucida Bright Italic" size="20.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="tipoReporteChoiceBox" layoutX="227.0" layoutY="131.0" prefHeight="30.0" prefWidth="185.0" />
+            <VBox alignment="CENTER" layoutX="540.0" layoutY="92.0" prefHeight="109.0" prefWidth="193.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnCargarOnAction" prefHeight="44.0" prefWidth="166.0" text="Cargar Datos">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnGenerarOnAction" prefHeight="44.0" prefWidth="169.0" text="Generar">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <TextArea fx:id="reportesTXT" layoutX="15.0" layoutY="229.0" prefHeight="250.0" prefWidth="762.0" style="-fx-effect: dropshadow(gaussian,  gray, 15, 0.3, 1, 0);">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,21 @@
+.button{
+    -fx-background-color:  linear-gradient(#ebfcfc, #b2ffff),radial-gradient(center 50% -40%, radius 200%, #91ffff 47%, #00e8e8 50%);
+    -fx-background-radius:  20 20 20 20;
+    -fx-font-family: "Lucida Bright Demibold";
+    -fx-text-fill:  black;
+    -fx-font-size: 20px;
+}
+.label{
+    -fx-font-family: "Lucida Console";
+    -fx-effect:  dropshadow(gaussian,  #26FFED, 20, 0.6, 0, 2);
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.texto{
+    -fx-background-color:  linear-gradient(#ebfcfc, #b2ffff),radial-gradient(center 50% -40%, radius 200%, #91ffff 47%, #00e8e8 50%);
+    -fx-background-radius:  20 20 20 20;
+    -fx-effect:  dropshadow(gaussian,  #26FFED, 20, 0.6, 0, 2);
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill:  black;
+    -fx-font-size: 24px;
+}

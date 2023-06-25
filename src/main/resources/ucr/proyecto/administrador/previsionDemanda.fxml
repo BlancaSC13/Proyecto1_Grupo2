@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="493.0" prefWidth="742.0" stylesheets="@../../../stylesheet/blackButton.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.administrador.PrevisionDemandaController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="802.0" styleClass="hbox">
+               <children>
+                  <Label styleClass="text" text="Inventario por demanda">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="demandaTblView" layoutX="54.0" layoutY="143.0" prefHeight="253.0" prefWidth="695.0" />
+            <Button layoutX="324.0" layoutY="420.0" mnemonicParsing="false" onAction="#btnProcesarOnAction" prefHeight="53.0" prefWidth="155.0" text="Procesar">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,10 @@
+.button{
+    -fx-background-color:   #7689dc;
+    -fx-background-radius:   20 20 20 20;
+    -fx-font-family: "Lucida Bright Demibold";
+    -fx-text-fill:  black;
+    -fx-font-size: 20px;
+}
+.vbox{
+    -fx-background-color: black;
+}

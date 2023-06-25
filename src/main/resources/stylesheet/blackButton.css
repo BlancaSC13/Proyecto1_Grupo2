@@ -1,0 +1,37 @@
+.button{
+    -fx-background-color: black;
+    -fx-background-radius:  30 30 30 30;
+    -fx-font-family: "Lucida Bright";
+    -fx-text-fill:  #7689dc;
+    -fx-font-size: 20;
+    -fx-pref-width: 166;
+    -fx-pref-height: 44;
+}
+
+button-modify{
+    -fx-background-color: black;
+    -fx-background-radius:  30 30 30 30;
+    -fx-font-family: "Lucida Bright";
+    -fx-text-fill:  #7689dc;
+    -fx-font-size: 20;
+    -fx-pref-width: 166;
+    -fx-pref-height: 44;
+}
+.table-view{
+    -fx-border-color: black;
+    -fx-effect: dropshadow(gaussian,  gray, 15, 0.3, 1, 0);
+    -fx-font-family: "Lucida Bright";
+}
+.hbox{
+    -fx-background-color: black;
+}
+
+.text{
+    -fx-text-fill:  #7689dc;
+    -fx-font-family: "Lucida Bright Demibold";
+}
+.choice-box{
+    -fx-background-radius: 15 15 15 15;
+    -fx-border-color: black;
+    -fx-border-radius: 15 15 15 15;
+}
