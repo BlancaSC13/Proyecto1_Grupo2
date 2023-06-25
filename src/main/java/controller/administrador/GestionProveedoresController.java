@@ -52,7 +52,6 @@ public class GestionProveedoresController
     @FXML
     void btnAgregarOnAction(ActionEvent event) {
         loadPage("administrador/ventanasEmergentes/agregarProveedor.fxml");
-        agregarProveedorController.addController(this);
     }
 
     @FXML
@@ -186,6 +185,7 @@ public class GestionProveedoresController
         }
     }
 
+    @FXML
     public void keyTypedBuscar(KeyEvent keyEvent) {
         FilteredList<Supplier> filteredList = new FilteredList<>(suppliers, b -> true);
         filteredList.setPredicate(user -> {

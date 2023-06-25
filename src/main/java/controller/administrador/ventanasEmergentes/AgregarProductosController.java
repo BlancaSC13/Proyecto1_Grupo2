@@ -59,6 +59,7 @@ public class AgregarProductosController {
             if (Inventory.agregaProducto(new Product(id, description, price, stock, minStock, suplierId), tree)) {
                 alert.setContentText("Producto agregado con exito");
                 alert.showAndWait();
+                Inventory.setInventory(GestionaArchivo.getInventory("inventario.json"));
             } else {
                 alert.setContentText("No se pudo agregar el producto porque ya existe");
                 alert.showAndWait();

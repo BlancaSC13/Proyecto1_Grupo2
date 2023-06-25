@@ -1,0 +1,19 @@
+.button{
+    -fx-background-radius:  5 5 5 5;
+    -fx-background-color:  black;
+    -fx-text-fill: #06ebd3;
+    -fx-font-family: "Lucida Bright";
+    -fx-pref-height: 37;
+    -fx-pref-width: 236;
+}
+
+.choice-box{
+    -fx-background-radius:  10 10 10 10;
+    -fx-pref-width: 177;
+    -fx-pref-height: 34;
+}
+
+.text-field{
+    -fx-pref-width: 177;
+    -fx-pref-height: 34;
+}
