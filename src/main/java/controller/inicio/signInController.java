@@ -80,12 +80,12 @@ public class signInController {
                         Security user = new Security(txtId.getText(), txtPassword.getText());
                         User registraUser = new User(txtId.getText(), txtUsername.getText(), txtEmail.getText(), txtAddress.getText(), "Cliente");
                         encriptaEnArchivo(user, "usuarios.json");
-                        registraUsuarios(registraUser, "registroUsuarios");
+                        registraUsuarios(registraUser, "registroUsuarios.json");
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setHeaderText("Registro de usarios");
                         alert.setContentText("Usuario registrado con éxito");
                         alert.showAndWait();
-                        //sendEmail();
+                        sendEmail();
                         clean();
                         loadPage("login.fxml");
                     } else {

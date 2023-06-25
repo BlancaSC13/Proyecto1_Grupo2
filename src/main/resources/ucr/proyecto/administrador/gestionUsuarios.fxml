@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="493.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.administrador.GestionUsuariosController">
+<BorderPane fx:id="bp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.administrador.GestionUsuariosController">
    <center>
       <AnchorPane prefHeight="493.0" prefWidth="742.0" stylesheets="@../../../stylesheet/blackButton.css">
          <children>
@@ -44,12 +44,7 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" layoutX="47.0" layoutY="96.0" prefHeight="66.0" prefWidth="366.0" spacing="15.0">
                <children>
-                  <TextField fx:id="txtBuscar" prefHeight="41.0" prefWidth="230.0" promptText="Usuario a buscar" style="-fx-background-radius: 10 10 10 10;" />
-                  <Button mnemonicParsing="false" onAction="#btnBuscarOnAction" text="Buscar">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
+                  <TextField fx:id="txtBuscar" onKeyTyped="#keyTapedBuscar" prefHeight="41.0" prefWidth="230.0" promptText="Usuario a buscar" style="-fx-background-radius: 10 10 10 10;" />
                </children>
             </HBox>
          </children>
