@@ -43,6 +43,7 @@ public class RealizarCompras
         ProductoChoiceBox.setItems(products);
         ProductoChoiceBox.setValue("Productos");
         setTable();
+
     }
     @FXML
     void btnAgregarOnAction(ActionEvent event) {
@@ -175,4 +176,11 @@ public class RealizarCompras
         }
     }
 
+    public ObservableList<OrderDetail> getItems() {
+        return items;
+    }
+
+    public void setItems(ObservableList<OrderDetail> items) {
+        this.items = items;
+    }
 }

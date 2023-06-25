@@ -223,7 +223,6 @@ public class GestionaArchivo {
                 .create();
         String json = gson.toJson(logbooks);
         try (FileWriter fileWriter = new FileWriter(path, false)) {
-            fileWriter.write(" ");
             fileWriter.write(json);
             fileWriter.close();
         } catch (IOException e) {
@@ -238,5 +237,19 @@ public class GestionaArchivo {
         }
     }
     //Lee Archivo de bitácora
-
+    public static AVL leeArchivo(String path) {
+        AVL avl = new AVL();
+        List<Object> users = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            Gson gson = new GsonBuilder()
+                    .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+                    .create();
+            Type list = new TypeToken<List<Logbooks>>() {
+            }.getType();
+            avl = gson.fromJson(br, AVL.class);
+        } catch (IOException e) {
+            new RuntimeException(e);
+        }
+        return avl;
+    }
 }

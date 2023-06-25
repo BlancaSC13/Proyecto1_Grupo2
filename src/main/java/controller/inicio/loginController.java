@@ -1,6 +1,7 @@
 package controller.inicio;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import controller.administrador.GestionProductosController;
 import controller.administrador.GestionProveedoresController;
 import controller.administrador.MenuAdministradorController;
 import domain.System.Security;
@@ -40,6 +41,7 @@ public class loginController {
     private Alert alert;
     private String username;
     public static Stage stage;
+    GestionProductosController gestionProductosController = new GestionProductosController();
 
 
     @FXML
@@ -85,8 +87,10 @@ public class loginController {
                     this.setUsername(txtUsername.getText());
                 } else if (!admis.isEmpty() && admis.contains(new Security(txtUsername.getText(), txtPassword.getText()))) {
                     loadPage2("administrador/menuAdministrador.fxml");
+                    gestionProductosController.setUsername(txtUsername.getText());
                 } else if (!consultores.isEmpty() && consultores.contains(new Security(txtUsername.getText(), txtPassword.getText()))) {
                     loadPage2("consultor/menuConsultor.fxml");
+                    this.setUsername(txtUsername.getText());
                 }else {
                     alert.setHeaderText("SignIn Error");
                     alert.setContentText("El usuario ingresado no existe");
